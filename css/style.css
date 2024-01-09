@@ -541,3 +541,15 @@ list-style: none;
 .contact-button:hover {
     background-color: rgb(76, 210, 214);
 }
+.modal-container {
+    width: 407px;
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
