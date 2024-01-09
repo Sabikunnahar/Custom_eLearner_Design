@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>eLEARNING - eLearning HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+      .page_title{
+            text-align: center;
+            margin: 4rem;
+        }
+        .page_title h2{
+            font-size: 35px;
+        }
+        .course_details_tab ul li{
+            width: 100%;
+            border: 1px solid rgb(76, 210, 214);
+            border-left: 6px solid rgb(76, 210, 214);
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 20px;
+            padding: 5px 0;
+            
+        }
+
+        .course_details_tab ul li:hover, .course_details_tab ul li:hover a{
+            background-color: rgb(76, 210, 214);
+            color: #fff;
+        }
+
+        .course_details_content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start; 
+            width: 100%;
+        }
+
+        .course_details_item{
+            margin-top: 15px;
+            position: relative;
+            flex-basis: 48%;
+            background-color: #fff;
+            overflow: hidden;
+            text-align: center;
+            border-left: 6px solid rgb(76, 210, 214);
+            box-shadow: 0px 10px 46px 0px rgba(158, 154, 240, 0.5);
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+
+        }
+        
+        .course_details_body{
+            width: 100%;
+            height: 180px;
+            
+        }
+        .course_details_body_img img{
+            width: 100%;
+            height: 100%;
+        }
+        .course_details_body_txt{
+            width: 100%;
+            position: absolute;
+            top: 31%;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0.9; /* Adjust opacity as needed */
+            background-color: rgba(14, 14, 14, 0.655); /* Background color for the overlay */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+            transition: transform 0.3s ease;
+        }
+        .course_details_body_txt:hover{
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+            top: 0%;
+            height: 180px;
+        }
+        .course_details_body_txt h3{
+            color: #fff;
+            text-align: left;
+            font-size: 21px;
+            padding: 10px 0;
+        }
+
+
+        .course_details_body_txt a{
+            color: #000;
+            background-color: rgb(76, 210, 214);
+            font-size: 17px;
+            font-weight: 700;
+            padding: 5px;
+            float: right;
+        }
+        .course_details_body_txt a:hover{
+            text-decoration: underline;
+        }
+
+        /**********************Item 2 design***************/
+        .course_details_body_1{
+            width: 100%;
+            height: 180px;
+            padding-top: 13px;
+            padding-left: 20px;  
+            }
+        .course_details_body_1 img{
+            width: 85px;
+            height: 70px;
+            text-align: left;
+            float: left;
+        }
+
+            
+        .course_details_body_txt_1{
+            width: 100%;
+            position: relative;
+            top: 31%;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0.9; /* Adjust opacity as needed */
+            background-color: rgba(14, 14, 14, 0.655); /* Background color for the overlay */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+            transition: transform 0.3s ease;
+        }
+        .course_details_body_txt_1 h3{
+            color: #fff;
+            text-align: left;
+            font-size: 21px;
+            padding: 10px 0;
+        }
+
+        .enroll_btn{
+            position: absolute;
+            bottom: 15px;
+        }
+
+        .enroll_btn a{
+            color: #000;
+            background-color: rgb(76, 210, 214);
+            font-size: 17px;
+            font-weight: 700;
+            padding: 5px;
+            float: right;
+        }
+        .enroll_btn a:hover{
+            text-decoration: underline;
+        }
+        .course_details_body_title h3{
+            font-size: 19px;
+            width: 100%;
+            text-align: left;
+            margin-top: 17px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link active">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Courses</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+     <!-- about start -->
+     <div class="page_title">
+        <h2>Explore Our Programs & Services</h2>
+    </div>
+<section class="container course_details mt-5" id="tab-section">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-5">
+            <div class="faq-list">
+                <div class="container-fluid course_details_tab">
+                    <ul class="nav faq-nav">
+                        <li><a href="#faq-tab-content1" data-toggle="tab" class="active">About Us</a></li>
+                        <li><a href="#faq-tab-content2" data-toggle="tab">Mission & Vision</a></li>
+                    </ul>
+                </div> <!-- container -->
+            </div> <!-- tab-list -->
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-7">
+            <div class="tab-content faq-content">
+                <div class="container-fluid tab-content faq-content">
+                    <div class="tab-pane about-tab-pane fade active show" id="faq-tab-content1">
+                        <div class="course_details_content">
+                            <!-- Item start 1-->
+                                <div class="course_details_item">
+                                    <div class="course_details_body">
+                                        <img class="img-fluid" src="img/pexels1.jpg" alt="">
+                                        <div class="course_details_body_txt">
+                                            <h3>Google Cloud Digital Leader</h3>
+                                            <a href="#">Enroll Now</a>
+                                        </div>
+                                        
+                                    </div> 
+                                </div> 
+                                <!-- Item end 1-->
+                                <!-- Item start 1-->
+                                <div class="course_details_item">
+                                    <div class="course_details_body">
+                                        <img class="img-fluid" src="img/pexels1.jpg" alt="">
+                                        <div class="course_details_body_txt">
+                                            <h3>Google Cloud Digital Leader</h3>
+                                            <a href="#">Enroll Now</a>
+                                        </div>
+                                        
+                                    </div> 
+                                </div> 
+                                <!-- Item end 1-->
+                                <!-- Item start 1-->
+                                <div class="course_details_item">
+                                    <div class="course_details_body">
+                                        <img class="img-fluid" src="img/pexels1.jpg" alt="">
+                                        <div class="course_details_body_txt">
+                                            <h3>Google Cloud Digital Leader</h3>
+                                            <a href="#">Enroll Now</a>
+                                        </div>
+                                        
+                                    </div> 
+                                </div> 
+                                <!-- Item end 1-->
+                            </div>
+
+                        </div> <!-- tab-pane -->
+                        <div class="tab-pane about-tab-pane fade" id="faq-tab-content2">
+                        <div class="course_details_content">
+                            <!-- Item start 2-->
+                            <div class="course_details_item">
+                                <div class="course_details_body_1">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <img class="img-fluid" src="img/cloude.png" alt="">
+                                                </div>
+                                                <div class="col-12 course_details_body_title">
+                                                    <h3 style="">Google Cloud Digital Leader</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="enroll_btn">
+                                                <a href="#">Enroll Now</a>
+                                            </div>
+                                                
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div> 
+                            <!-- Item end 2-->
+                            <!-- Item start 2-->
+                            <div class="course_details_item">
+                                <div class="course_details_body_1">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <img class="img-fluid" src="img/cloude.png" alt="">
+                                                </div>
+                                                <div class="col-12 course_details_body_title">
+                                                    <h3 style="">Google Cloud Digital Leader</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="enroll_btn">
+                                                <a href="#">Enroll Now</a>
+                                            </div>
+                                                
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div> 
+                            <!-- Item end 2-->
+                        </div>
+                    </div> <!-- tab-pane -->
+                </div> <!-- container -->
+            </div> <!-- tab-content -->
+        </div>
+    </div>
+</section>
+<!-- about ends -->   
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- contact -->
+    <a href="#contact" class="contact-button">Contact Us</a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
