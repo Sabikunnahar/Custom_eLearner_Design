@@ -56,14 +56,14 @@
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="courses.html" class="nav-item nav-link">Courses</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="team.html" class="dropdown-item">Our Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">404 Page</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="contact.html" class="nav-item nav-link active">Contact</a>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -76,12 +76,12 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Not Found</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Contact</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">404</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
                         </ol>
                     </nav>
                 </div>
@@ -89,24 +89,86 @@
         </div>
     </div>
     <!-- Header End -->
-
-
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="">Go Back To Home</a>
+    <div class="container">
+        <div class="untree_co-section ">
+            <div class="container">
+                <div class="row mb-5 justify-content-center">
+                <div class="mx-auto " data-aos-delay="200">
+                    <form action="{{ route('student.store') }}" class="form-box" method="post" enctype="multipart/form-data" id="registration_form">
+    
+                        <input type="hidden" name="course_id" value="{{$course->id}}" >
+                        <input type="hidden" name="category_id" value="{{$category->id}}" >
+                        <input type="hidden" name="category_name" value="{{$category->categories_name}}">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <input type="text" class="form-control" name="course_name" value="{{$course->course_name}}" type="text" placeholder="{{$course->course_name}}" id="student_name">
+    
+                            </div>
+        
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <input type="file" class="form-control" name="student_image" placeholder="Student Image" id="student_image">
+    
+                            </div>
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <input type="text" class="form-control" name="student_name" type="text" placeholder="Student Name" id="student_name">
+    
+                            </div>
+        
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <input type="email"  class="form-control" name="email" placeholder="Enter Email Address" value="{{ old('email') }}">
+    
+                            </div>
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <input type="text"  class="form-control" name="phone_number" placeholder="Enter Phone no." value="{{ old('phone_number') }}">
+                            </div>
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" onblur="ageCheck()" placeholder="Date of Birth">
+                            </div>
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <select name="gender" id="gender" class="form-control">
+                                    <option label="-- SELECT --"></option>
+                                    <option value="MALE">MALE</option>
+                                    <option value="FEMALE">FEMALE</option>
+                                    <option value="OTHERS">OTHERS</option>
+                                </select>
+    
+                            </div>
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <input name="father_name"class="form-control" id="father_name" type="text" placeholder="Father's Name " value="{{ old('father_name') }}">
+    
+                            </div>
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <input name="mother_name" class="form-control" id="mother_name" type="text" placeholder="Mother's Name " value="{{ old('mother_name') }}">
+    
+                            </div>
+                            <div class="col-lg-6 col-sm-12 mb-3">
+                                <textarea name="address" class="form-control" id="address" placeholder="Address Here.."></textarea>
+    
+                            </div>
+        
+        
+        
+        
+                            <div class="col-6 mb-3">
+                            <label class="control control--checkbox">
+                                <span class="caption">Accept our <a href="#">terms and conditions</a></span>
+                                <input type="checkbox" checked="checked" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            </div>
+        
+                            <div class="col-12">
+                            <input type="submit" value="Register" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 </div>
             </div>
-        </div>
+            </div> <!-- /.untree_co-section -->
+    
     </div>
-    <!-- 404 End -->
-        
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -192,6 +254,8 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- contact -->
+    <a href="#contact" class="contact-button">Contact Us</a>
 
 
     <!-- JavaScript Libraries -->
