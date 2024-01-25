@@ -482,7 +482,7 @@
     height: auto;
     justify-content: space-evenly;
     background-color: #EEEDFE;
-    padding: 5rem;
+    padding: 3rem;
     padding-top: 2rem;
     background-image: linear-gradient(177deg, #FFF 0%, #2bc5d4 100%);
 }
@@ -515,7 +515,7 @@ list-style: none;
 .offer_page_items ul li{
     text-align: left;
     line-height: 2;
-    font-size: 22px;
+    font-size: 20px;
 }
 .offer_page_items ul li i{
     font-size: 25px;
